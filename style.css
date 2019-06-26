@@ -55,12 +55,13 @@ main {
 }
 #services {
     background-color: #444;
+    color: #fff;
 }
 #services li {
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #ffffff;
-    display: inline;
+    display: block;
 }
 #services ul {
     margin-left: 10%;
