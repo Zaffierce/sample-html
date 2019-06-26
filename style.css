@@ -1,0 +1,72 @@
+header {
+    height: 150px;
+    background-color: #444;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+nav {
+    background-color: #555;
+    text-align: center;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+    font-size: 20px;
+}
+nav li a {
+    text-decoration: none;
+    color: red;
+}
+
+#logo {
+    margin-left: 20px;
+    display: inline;
+}
+
+main {
+}
+
+#bio {
+    background-color: #555;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 25px;
+    padding-left: 20px;
+    font-size: 20px;
+    height: 450px;
+}
+
+#bio p {
+    clear: left;
+    display: inline;
+    padding-left: 20px;
+}
+
+#bio img {
+    float: left;
+    padding-right: 20px;
+}
+#services {
+    background-color: #444;
+}
+#services li {
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    display: inline;
+}
+#services ul {
+    margin-left: 10%;
+    display: inline-block;
+}
+
+footer {
+    clear: left;
+}
