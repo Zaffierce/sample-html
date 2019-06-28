@@ -1,10 +1,12 @@
 //sets function askQuestion to a universal function where I can pass in any prompt I want.
 //askQuestion("Hello!")
-function askQuestion(msg) {
+function askQuestion(msg, picture, section) {
+  document.write(`<img id="${section}" src=${picture}>`)
   answer = prompt(msg);
 }
 
-askQuestion("What is the secret password?");
+alert(`Stop!  Who would enter this website must answer me this question, ere the other side he see.`)
+askQuestion(`WHAT.... is your name?`, "https://media.giphy.com/media/udESfsOyq1wnm/giphy.gif", "name");
 
 //var secretKey = ['Z', 'A', 'Z']
 //Only works on the index[0]....
@@ -13,45 +15,45 @@ var secretKey = 'Brian';
 var validated = false;
 
 //Loops for 5 times
-for (var i = 0; i <= 5; i++) {
+for (var i = 0; i <= 3; i++) {
   if (answer === secretKey) {
     validated = true;
     break;
   } else {
-    //Asks the question 4 times.
-    if (i <= 4) {
-      //Subtracts 5 from i
-      timesRemaining = '5' - i;
-      askQuestion('ERROR:  Incorrect password, please try again.  Attempts remaining: ' + timesRemaining);
+    //Asks the question 3 times.
+    if (i <= 2) {
+      //Subtracts 3 from i
+      timesRemaining = '3' - i;
+      askQuestion(`I don't believe your name is ${answer}, but I am a gracious gate keeper.  You may try ${timesRemaining} more times.`," " , " ");
     }
-    //If it's on the 5th time, send an alert that they've failed.
-    if (i === 5) {
-      alert("You have failed authentication too many times!");
-      //document.getElementsByTagName('body').style.display = 'none';
-      document.getElementsByName('body').style.display = 'none';
-      //element.style.display = 'none';
+    //If it's on the 3rd time, send an alert that they've failed.
+    if (i === 3) {
+      document.getElementById("name").style.display = "none";
+      document.write(`<img src="https://media.giphy.com/media/JVpOY2xVaydJS/giphy.gif">`);
+      document.write(`WRONG!`);
     }
   }
 }
 
-function askName() {
-  setName = prompt("Please enter your name!");
+function getName() {
+  setName = answer;
+  document.getElementById("name").style.display = "none";
   document.write(`Welcome ${setName}!  <br /><br />`)
 }
 
 function askColor() {
-  setColor = prompt("Please enter a color!");
+  askQuestion(`WHAT.... is your favorite color?`, "https://i.imgur.com/5Bwl3Nl.gif", "color")
+  setColor = answer;
   document.body.style.color = setColor;
+  document.getElementById("color").style.display = "none";
 }
 
 function askAnimal() {
-  setAnimal = prompt("Please enter an animal type.  You may choose from cat, dog or sheep.")
+  setAnimal = prompt(`WHAT.... is your favorite animal?  I'll be kind and give you a choice of cat, dog or sheep.`)
 }
 
 if (validated === true) {
-  alert("Successfully logged in.  Please fill in the following data...")
-
-askName();
+getName();
 askColor();
 askAnimal();
 //sets askAnimal to lowercase
@@ -79,7 +81,8 @@ if (setAnimalLC === "cat" || setAnimalLC === "dog" || setAnimalLC === "sheep") {
     giveAnswer()
   }
 } else {
-  alert("Boo you suck.  You failed to enter a valid response, so now you won't get the super cool fact about that animal!")
+  document.write(`<img src="https://media.giphy.com/media/JVpOY2xVaydJS/giphy.gif">`);
+  document.write(`WRONG!`);
 }
 } 
 
