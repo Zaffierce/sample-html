@@ -52,38 +52,42 @@ function askAnimal() {
   setAnimal = prompt(`WHAT.... is your favorite animal?  I'll be kind and give you a choice of cat, dog or sheep.`)
 }
 
+
+
 if (validated === true) {
-getName();
-askColor();
-askAnimal();
-//sets askAnimal to lowercase
-setAnimalLC = setAnimal.toLowerCase()
+  getName();
+  askColor();
+  askAnimal();
+  //sets askAnimal to lowercase
+  setAnimalLC = setAnimal.toLowerCase()
 
-function giveAnswer() {
-  document.write(fact)
-  document.write(picture)
-}
+  function giveAnswer() {
+    document.write(fact)
+    document.write(picture)
+  }
 
-if (setAnimalLC === "cat" || setAnimalLC === "dog" || setAnimalLC === "sheep") {
-  if (setAnimalLC === "cat") {
-    var fact = '70% of your cats life is spent asleep. <br />'
-    var picture = '<img id="cat" src="https://images.pexels.com/photos/208984/pexels-photo-208984.jpeg">'
-    giveAnswer()
+  //Rewrite to capture this into a function to call after being validated.
+
+  if (setAnimalLC === "cat" || setAnimalLC === "dog" || setAnimalLC === "sheep") {
+    if (setAnimalLC === "cat") {
+      var fact = '70% of your cats life is spent asleep. <br />'
+      var picture = '<img id="cat" src="https://images.pexels.com/photos/208984/pexels-photo-208984.jpeg">'
+      giveAnswer()
+    }
+    if (setAnimalLC === "dog") {
+      var fact = 'When your dog is carefully choosing the perfect place to do his business, it is because they prefer to go poop in alignment with the Earth’s magnetic field. <br />'
+      var picture = '<img id="dog" src="https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg">'
+      giveAnswer()
+    }
+    if (setAnimalLC === "sheep") {
+      var fact = 'When Woodrow Wilson was President, the First Lady had sheep graze on the White House lawn to keep it neat and well trimmed.  <br />'
+      var picture = '<img id="dog" src="https://images.pexels.com/photos/1773181/pexels-photo-1773181.jpeg">'
+      giveAnswer()
+    }
+  } else {
+    document.write(`<img src="https://media.giphy.com/media/JVpOY2xVaydJS/giphy.gif">`);
+    document.write(`WRONG!`);
   }
-  if (setAnimalLC === "dog") {
-    var fact = 'When your dog is carefully choosing the perfect place to do his business, it is because they prefer to go poop in alignment with the Earth’s magnetic field. <br />'
-    var picture = '<img id="dog" src="https://images.pexels.com/photos/160846/french-bulldog-summer-smile-joy-160846.jpeg">'
-    giveAnswer()
-  }
-  if (setAnimalLC === "sheep") {
-    var fact = 'When Woodrow Wilson was President, the First Lady had sheep graze on the White House lawn to keep it neat and well trimmed.  <br />'
-    var picture = '<img id="dog" src="https://images.pexels.com/photos/1773181/pexels-photo-1773181.jpeg">'
-    giveAnswer()
-  }
-} else {
-  document.write(`<img src="https://media.giphy.com/media/JVpOY2xVaydJS/giphy.gif">`);
-  document.write(`WRONG!`);
-}
 } 
 
 
