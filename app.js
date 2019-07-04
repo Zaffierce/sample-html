@@ -1,5 +1,6 @@
 //sets function askQuestion to a universal function where I can pass in any prompt I want.
 //askQuestion("Hello!")
+
 function askQuestion(msg, picture, section) {
   document.write(`<img id="${section}" src=${picture}>`)
   answer = prompt(msg);
